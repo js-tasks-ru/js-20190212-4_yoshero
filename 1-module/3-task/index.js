@@ -30,7 +30,7 @@ function getMinMax(str) {
 function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n)
 }
-gi
+
 function getNumbers( str) {
     const newStr = str.replace(/,/g,' ')
     const strInArray =  newStr.split(' ')
@@ -47,6 +47,6 @@ function getNumbers( str) {
 
 }
 
-var inputData = '1, -5.8 или 10, хотя 34 + -5.3 и 73';
+var inputData = '25,-1,-234,4,   1000';
 
 console.log( getMinMax(inputData) )
