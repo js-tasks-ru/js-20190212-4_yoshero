@@ -23,7 +23,6 @@ function pow(x, n) {
     }
 }
 
-
 alert('программа возводит x в степень n')
 const x = parseInt(prompt('введите число x:', 1 ))
 
