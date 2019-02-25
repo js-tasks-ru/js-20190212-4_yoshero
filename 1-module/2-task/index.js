@@ -14,7 +14,7 @@ function print (text) {
 function isValid (name) {
 
 
-    if ( (name !== null) && ( name.length > 3 ) && ( name.indexOf(' ') === -1 )  ){
+    if ( ( name !== null ) && ( name.length > 3 ) && ( name.indexOf(' ') === -1 )  ){
         return true
     } else { return false }
 
