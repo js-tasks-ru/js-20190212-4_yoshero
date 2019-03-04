@@ -6,10 +6,10 @@
  */
 function showSalary(data, age) {
  let results = ''
-    for (const human in data ){
+    for (let i = 0; i< data.length; i++  ){
      //console.log(data [human])
-        if ( data[human].age <= age ) {
-            results += data[human].name +', '+ data[human].balance + '\n'
+        if ( data[i].age <= age ) {
+            results += data[i].name +', '+ data[i].balance + '\n'
         }
     }
 
