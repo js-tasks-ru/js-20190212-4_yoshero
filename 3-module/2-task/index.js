@@ -6,7 +6,7 @@ let calendar = {
 
 calendar[Symbol.iterator] = function () {
 
-    let current = this.from;
+    let current = new Date( this.from.toString() );
 
     let last = this.to;
     let val;
@@ -16,7 +16,9 @@ calendar[Symbol.iterator] = function () {
 
             if ( current <= last ) {
 
-                 i = current.toLocaleString("ru", { day : '2-digit' }  )
+                current.setDate( current.getDate()  + 1 )
+
+                i = current.toLocaleString("ru", { day : '2-digit' }  )
 
                 if (current.getDay() !== 0 && current.getDay() !== 6)
                 {
@@ -25,7 +27,7 @@ calendar[Symbol.iterator] = function () {
                     val = `[${i}]`
                 }
 
-                current.setDate( current.getDate()  + 1 )
+
 
                 return {
                     done: false,
