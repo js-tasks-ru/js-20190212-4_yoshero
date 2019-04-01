@@ -23,7 +23,7 @@
             this.el.classList.add("pure-table")
             this.el.innerHTML =  createTable(data)
             this.data = data;
-            this.el.onclick = el =>{
+            this.el.addEventListener('click', el =>{
 
                     if(  el.target.nodeName !== 'A' ) {
                         return
@@ -35,7 +35,7 @@
                     this.onRemoved(id)
 
 
-            }
+            })
         }
 
         /**
@@ -66,7 +66,7 @@
                 tbody +=  `<td class = "table__cell table__cell_body">${items[ i ][key]}</td>`
             }
 
-            tbody += `<td><a href="#delete">X</a></td </tr>`
+            tbody += `<td><a href="#delete">X</a></td></tr>`
         }
 
         tbody += `</tbody>`
