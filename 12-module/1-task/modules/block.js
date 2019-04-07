@@ -1,6 +1,4 @@
-(function () {
-
-    class Block {
+export default class Block {
 
         constructor() {
             this.el = document.createElement('div');
@@ -11,5 +9,3 @@
         }
     }
 
-    window.Block = Block;
-})();
